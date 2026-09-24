@@ -3,7 +3,6 @@
 <div class="min-h-screen bg-[#f5f3ef] text-[#1A1A1A] font-sans selection:bg-[#A35C46] selection:text-white">
     
     <!-- Navigation -->
-    <!-- Navigation -->
     <header class="sticky top-0 z-50 bg-[#f5f3ef] flex justify-between items-center py-6 px-8 md:px-16 border-b border-black/5">
         <div class="font-serif font-bold text-xl tracking-tight">Worn Well</div>
         
@@ -35,8 +34,8 @@
         <!-- Left Side: Copy & Stats -->
         <div class="pr-12 lg:pt-12">
             <span class="text-[0.65rem] font-bold tracking-[0.2em] text-[#A35C46] uppercase mb-4 block">Secondhand & Loved</span>
-            <h1 class="text-6xl lg:text-[5.5rem] font-light leading-[1.05] mb-6">
-                Clothes with<br/><em class="font-serif italic tracking-tight">a past.</em>
+            <h1 class="text-6xl lg:text-[5.5rem] font-serif font-light leading-[1.05] mb-6">
+                Clothes with<br/><em class="italic tracking-tight">a past.</em>
             </h1>
             <p class="text-[#666] text-[0.85rem] leading-relaxed max-w-[340px] mb-12">
                 Carefully curated thrifted pieces — each one inspected, described honestly, and priced fairly. Find your next favourite thing.
@@ -55,15 +54,15 @@
             <!-- Stats -->
             <div class="flex gap-12">
                 <div class="flex flex-col">
-                    <span class="text-xl font-medium text-[#1A1A1A]">340+</span>
+                    <span class="text-2xl font-serif text-[#1A1A1A]">340+</span>
                     <span class="text-[0.7rem] text-[#888] mt-1">Items listed</span>
                 </div>
                 <div class="flex flex-col">
-                    <span class="text-xl font-medium text-[#1A1A1A]">P100</span>
+                    <span class="text-2xl font-serif text-[#1A1A1A]">P100</span>
                     <span class="text-[0.7rem] text-[#888] mt-1">Avg. shipping</span>
                 </div>
                 <div class="flex flex-col">
-                    <span class="text-xl font-medium text-[#1A1A1A]">100%</span>
+                    <span class="text-2xl font-serif text-[#1A1A1A]">100%</span>
                     <span class="text-[0.7rem] text-[#888] mt-1">Authenticated</span>
                 </div>
             </div>
@@ -85,7 +84,7 @@
     <!-- 2. CLOSET SECTION -->
     <section class="py-20 px-8 md:px-16">
         <div class="flex justify-between items-end mb-12">
-            <h2 class="text-4xl font-light leading-none tracking-tight">Shop by<br/><em class="font-serif italic">category</em></h2>
+            <h2 class="text-4xl font-serif font-light leading-none tracking-tight">Shop by<br/><em class="italic">category</em></h2>
             <a href="#" class="text-[0.7rem] font-bold tracking-widest uppercase text-[#1A1A1A] hover:text-[#A35C46] border-b border-[#1A1A1A] hover:border-[#A35C46] pb-0.5 transition-colors">View all &rarr;</a>
         </div>
 
@@ -130,7 +129,7 @@
         <div class="flex justify-between items-end mb-12">
             <div>
                 <span class="text-[0.65rem] font-bold tracking-[0.2em] text-[#A35C46] uppercase mb-3 block">Handpicked</span>
-                <h2 class="text-4xl font-light leading-none tracking-tight">This week's<br/><em class="font-serif italic">favourites</em></h2>
+                <h2 class="text-4xl font-serif font-light leading-none tracking-tight">This week's<br/><em class="italic">favourites</em></h2>
             </div>
             <a href="#" class="text-[0.7rem] font-bold tracking-widest uppercase text-[#1A1A1A] hover:text-[#A35C46] border-b border-[#1A1A1A] hover:border-[#A35C46] pb-0.5 transition-colors">See all new arrivals &rarr;</a>
         </div>
@@ -177,35 +176,36 @@
         </div>
     </section>
 
-    <!-- 4. FOOTER -->
-    <footer class="bg-[#f5f3ef] px-8 md:px-16 pb-8">
-        <!-- Split Banner -->
+<!-- 4. FOOTER -->
+    <footer class="bg-[#f5f3ef] pb-8">
+        <!-- Split Banner (Edge-to-Edge) -->
         <div class="grid grid-cols-1 lg:grid-cols-2 w-full min-h-[480px] mb-12">
-            <div class="h-full">
+            <div class="relative h-full">
                 <img src="images/clothes.png" alt="Clothing Rack" class="w-full h-full object-cover" />
+                <div class="absolute inset-0 bg-black/5 pointer-events-none"></div>
             </div>
             
-            <div class="bg-[#221f1d] text-[#F4EFEB] p-12 lg:p-20 flex flex-col justify-center">
-                <span class="text-[0.6rem] font-bold tracking-[0.2em] text-[#C27A65] uppercase mb-5 block">Why Thrift?</span>
-                <h2 class="text-4xl lg:text-[3.25rem] font-light leading-[1.1] mb-8 text-[#f5f3ef]">
-                    Every piece has<br/><em class="font-serif italic tracking-tight">a story.</em>
+            <div class="bg-[#221f1d] text-[#F4EFEB] p-12 lg:p-20 xl:p-24 flex flex-col justify-center">
+                <span class="text-[0.6rem] font-bold tracking-[0.2em] text-[#C27A65] uppercase mb-5 block font-sans">Why Thrift?</span>
+                <h2 class="text-4xl lg:text-[3.25rem] font-serif font-light leading-[1.1] mb-8 text-[#f5f3ef]">
+                    Every piece has<br/><em class="italic tracking-tight">a story.</em>
                 </h2>
-                <p class="text-[0.8rem] leading-[1.8] text-[#a39f99] mb-6 max-w-[420px]">
+                <p class="text-[0.8rem] leading-[1.8] text-[#a39f99] mb-6 max-w-[420px] font-sans">
                     Fast fashion is expensive — for you and for the planet. We believe in buying less and buying better. Each piece we list has been worn, loved, and is ready for a second chapter.
                 </p>
-                <p class="text-[0.8rem] leading-[1.8] text-[#a39f99] max-w-[420px]">
+                <p class="text-[0.8rem] leading-[1.8] text-[#a39f99] max-w-[420px] font-sans">
                     We inspect every item for quality, describe flaws honestly, and photograph everything ourselves. No surprises, ever.
                 </p>
             </div>
         </div>
 
-        <!-- Bottom Bar -->
-        <div class="flex flex-col md:flex-row justify-between items-center pt-8 pb-4 text-[0.7rem] text-[#888] border-t border-black/10">
+        <!-- Bottom Bar (Maintains container padding) -->
+        <div class="flex flex-col md:flex-row justify-between items-center pt-4 pb-4 px-8 md:px-16 text-[0.7rem] text-[#888]">
             <span class="font-serif font-bold text-base text-[#1A1A1A]">Worn Well</span>
             
-            <span class="my-4 md:my-0">&copy; 2026 - Sustainably sourced, honestly described</span>
+            <span class="my-4 md:my-0 font-sans">&copy; 2026 - Sustainably sourced, honestly described</span>
             
-            <div class="flex gap-8">
+            <div class="flex gap-8 font-sans">
                 <a href="#" class="text-[#1A1A1A] font-medium hover:text-[#A35C46] transition-colors">Instagram</a>
                 <a href="#" class="text-[#1A1A1A] font-medium hover:text-[#A35C46] transition-colors">FAQ</a>
             </div>

@@ -1,21 +1,39 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="/" />
-    <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="app.css" />
-    <link rel="stylesheet" href="WornWell.styles.css" />
-    <link rel="icon" type="image/png" href="favicon.png" />
+    <title>WornWell</title>
+    
+    <!-- 1. Import Exact Fonts from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- 2. Load Tailwind via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 3. Configure Tailwind to use the imported fonts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Work Sans"', 'sans-serif'],
+                        serif: ['"Fraunces"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
     <HeadOutlet />
 </head>
-
 <body>
     <Routes />
+    
+    <!-- Blazor Framework Script -->
     <script src="_framework/blazor.web.js"></script>
 </body>
-
 </html>
