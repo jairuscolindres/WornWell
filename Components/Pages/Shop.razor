@@ -1,0 +1,230 @@
+@page "/shop"
+
+<div class="min-h-screen flex flex-col w-full bg-[#f5f3ef] text-[#1A1A1A] font-sans selection:bg-[#A35C46] selection:text-white">
+    
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-[#f5f3ef] flex items-center justify-between py-6 px-8 md:px-16 border-b border-black/5">
+        <a href="/" class="font-serif font-bold text-xl tracking-tight text-[#1A1A1A] hover:text-[#A35C46] transition-colors">Worn Well</a>
+        
+        <nav class="hidden md:flex gap-8 absolute left-1/2 -translate-x-1/2">
+            <a href="/" class="text-[0.8rem] font-medium text-[#666] hover:text-[#A35C46] transition-colors">Home</a>
+            <a href="/shop" class="text-[0.8rem] font-medium text-[#A35C46]">Shop</a>
+            <a href="/story" class="text-[0.8rem] font-medium text-[#666] hover:text-[#A35C46] transition-colors">About</a>
+        </nav>
+
+        <div class="flex items-center gap-5">
+            <button class="text-[#1A1A1A] hover:text-[#A35C46] transition-colors">
+                <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                </svg>
+            </button>
+            <button class="relative text-[#1A1A1A] hover:text-[#A35C46] transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                </svg>
+                <span class="absolute -top-1.5 -right-2 bg-[#A35C46] text-white text-[0.6rem] px-[5px] py-[1px] rounded-full font-medium">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 px-8 md:px-16 pb-24">
+        
+        <!-- Header -->
+        <div class="pt-12 pb-8">
+            <span class="text-[0.65rem] font-bold tracking-[0.2em] text-[#A35C46] uppercase mb-4 block">340+ Pieces</span>
+            <h1 class="text-5xl lg:text-[4rem] font-serif font-light text-[#1A1A1A]">
+                Browse the <em class="italic">rack.</em>
+            </h1>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="border-y border-black/10 py-5 flex flex-col md:flex-row md:items-center justify-between text-[0.65rem] gap-6">
+            <div class="flex flex-col md:flex-row md:items-center gap-6 lg:gap-10">
+                
+                <!-- Category Filters -->
+                <div class="flex items-center gap-4">
+                    <span class="font-bold tracking-[0.15em] uppercase text-[#888]">Category</span>
+                    <div class="flex flex-wrap gap-2">
+                        <button class="bg-[#1A1A1A] text-white px-4 py-1.5 border border-[#1A1A1A]">All</button>
+                        <button class="bg-transparent text-[#1A1A1A] px-4 py-1.5 border border-black/15 hover:border-black/40 transition-colors">Outerwear</button>
+                        <button class="bg-transparent text-[#1A1A1A] px-4 py-1.5 border border-black/15 hover:border-black/40 transition-colors">Tops</button>
+                        <button class="bg-transparent text-[#1A1A1A] px-4 py-1.5 border border-black/15 hover:border-black/40 transition-colors">Bottoms</button>
+                        <button class="bg-transparent text-[#1A1A1A] px-4 py-1.5 border border-black/15 hover:border-black/40 transition-colors">Dresses</button>
+                    </div>
+                </div>
+
+                <!-- Condition Filters -->
+                <div class="flex items-center gap-4">
+                    <span class="font-bold tracking-[0.15em] uppercase text-[#888]">Condition</span>
+                    <div class="flex flex-wrap gap-2">
+                        <button class="bg-[#1A1A1A] text-white px-4 py-1.5 border border-[#1A1A1A]">All</button>
+                        <button class="bg-transparent text-[#1A1A1A] px-4 py-1.5 border border-black/15 hover:border-black/40 transition-colors">Excellent</button>
+                        <button class="bg-transparent text-[#1A1A1A] px-4 py-1.5 border border-black/15 hover:border-black/40 transition-colors">Good</button>
+                        <button class="bg-transparent text-[#1A1A1A] px-4 py-1.5 border border-black/15 hover:border-black/40 transition-colors">Fair</button>
+                    </div>
+                </div>
+
+            </div>
+            <span class="text-[#888] font-medium tracking-wide">8 items</span>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12 mt-10">
+            
+            <!-- Item 1 -->
+            <div class="flex flex-col group cursor-pointer">
+                <!-- Image Placeholder -->
+                <div class="relative aspect-[4/5] mb-4 bg-[#e8e4de] border border-black/5">
+                    <span class="absolute top-3 left-3 bg-[#f5f3ef]/90 text-[#A35C46] border border-[#A35C46]/30 text-[0.55rem] font-bold tracking-widest px-2 py-0.5 z-10 uppercase">
+                        Good
+                    </span>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div class="flex flex-col">
+                        <h3 class="text-[0.85rem] font-serif font-bold text-[#1A1A1A] mb-1">Leather Moto Jacket</h3>
+                        <div class="text-[0.65rem] text-[#888] flex gap-2">
+                            <span>Outerwear</span>
+                            <span>Size M</span>
+                        </div>
+                    </div>
+                    <span class="font-serif font-bold text-[0.85rem] text-[#1A1A1A]">P1,200</span>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="flex flex-col group cursor-pointer">
+                <div class="relative aspect-[4/5] mb-4 bg-[#e8e4de] border border-black/5">
+                    <span class="absolute top-3 left-3 bg-[#f5f3ef]/90 text-[#A35C46] border border-[#A35C46]/30 text-[0.55rem] font-bold tracking-widest px-2 py-0.5 z-10 uppercase">
+                        Excellent
+                    </span>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div class="flex flex-col">
+                        <h3 class="text-[0.85rem] font-serif font-bold text-[#1A1A1A] mb-1">Denim Trucker Jacket</h3>
+                        <div class="text-[0.65rem] text-[#888] flex gap-2">
+                            <span>Outerwear</span>
+                            <span>Size L</span>
+                        </div>
+                    </div>
+                    <span class="font-serif font-bold text-[0.85rem] text-[#1A1A1A]">P850</span>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="flex flex-col group cursor-pointer">
+                <div class="relative aspect-[4/5] mb-4 bg-[#e8e4de] border border-black/5">
+                    <span class="absolute top-3 left-3 bg-[#f5f3ef]/90 text-[#A35C46] border border-[#A35C46]/30 text-[0.55rem] font-bold tracking-widest px-2 py-0.5 z-10 uppercase">
+                        Good
+                    </span>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div class="flex flex-col">
+                        <h3 class="text-[0.85rem] font-serif font-bold text-[#1A1A1A] mb-1">Vintage Varsity Jacket</h3>
+                        <div class="text-[0.65rem] text-[#888] flex gap-2">
+                            <span>Outerwear</span>
+                            <span>Size S</span>
+                        </div>
+                    </div>
+                    <span class="font-serif font-bold text-[0.85rem] text-[#1A1A1A]">P1,500</span>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="flex flex-col group cursor-pointer">
+                <div class="relative aspect-[4/5] mb-4 bg-[#e8e4de] border border-black/5">
+                    <span class="absolute top-3 left-3 bg-[#f5f3ef]/90 text-[#A35C46] border border-[#A35C46]/30 text-[0.55rem] font-bold tracking-widest px-2 py-0.5 z-10 uppercase">
+                        Excellent
+                    </span>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div class="flex flex-col">
+                        <h3 class="text-[0.85rem] font-serif font-bold text-[#1A1A1A] mb-1">Floral Midi Dress</h3>
+                        <div class="text-[0.65rem] text-[#888] flex gap-2">
+                            <span>Dresses</span>
+                            <span>Size S</span>
+                        </div>
+                    </div>
+                    <span class="font-serif font-bold text-[0.85rem] text-[#1A1A1A]">P620</span>
+                </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="flex flex-col group cursor-pointer">
+                <div class="relative aspect-[4/5] mb-4 bg-[#e8e4de] border border-black/5">
+                    <span class="absolute top-3 left-3 bg-[#f5f3ef]/90 text-[#A35C46] border border-[#A35C46]/30 text-[0.55rem] font-bold tracking-widest px-2 py-0.5 z-10 uppercase">
+                        Good
+                    </span>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div class="flex flex-col">
+                        <h3 class="text-[0.85rem] font-serif font-bold text-[#1A1A1A] mb-1">Washed Linen Shirt</h3>
+                        <div class="text-[0.65rem] text-[#888] flex gap-2">
+                            <span>Tops</span>
+                            <span>Size M</span>
+                        </div>
+                    </div>
+                    <span class="font-serif font-bold text-[0.85rem] text-[#1A1A1A]">P380</span>
+                </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="flex flex-col group cursor-pointer">
+                <div class="relative aspect-[4/5] mb-4 bg-[#e8e4de] border border-black/5">
+                    <span class="absolute top-3 left-3 bg-[#f5f3ef]/90 text-[#A35C46] border border-[#A35C46]/30 text-[0.55rem] font-bold tracking-widest px-2 py-0.5 z-10 uppercase">
+                        Good
+                    </span>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div class="flex flex-col">
+                        <h3 class="text-[0.85rem] font-serif font-bold text-[#1A1A1A] mb-1">High-Rise Mom Jeans</h3>
+                        <div class="text-[0.65rem] text-[#888] flex gap-2">
+                            <span>Bottoms</span>
+                            <span>Size 28</span>
+                        </div>
+                    </div>
+                    <span class="font-serif font-bold text-[0.85rem] text-[#1A1A1A]">P540</span>
+                </div>
+            </div>
+
+            <!-- Item 7 -->
+            <div class="flex flex-col group cursor-pointer">
+                <div class="relative aspect-[4/5] mb-4 bg-[#e8e4de] border border-black/5">
+                    <span class="absolute top-3 left-3 bg-[#f5f3ef]/90 text-[#A35C46] border border-[#A35C46]/30 text-[0.55rem] font-bold tracking-widest px-2 py-0.5 z-10 uppercase">
+                        Excellent
+                    </span>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div class="flex flex-col">
+                        <h3 class="text-[0.85rem] font-serif font-bold text-[#1A1A1A] mb-1">Stripe Knit Pullover</h3>
+                        <div class="text-[0.65rem] text-[#888] flex gap-2">
+                            <span>Tops</span>
+                            <span>Size L</span>
+                        </div>
+                    </div>
+                    <span class="font-serif font-bold text-[0.85rem] text-[#1A1A1A]">P460</span>
+                </div>
+            </div>
+
+            <!-- Item 8 -->
+            <div class="flex flex-col group cursor-pointer">
+                <div class="relative aspect-[4/5] mb-4 bg-[#e8e4de] border border-black/5">
+                    <span class="absolute top-3 left-3 bg-[#f5f3ef]/90 text-[#A35C46] border border-[#A35C46]/30 text-[0.55rem] font-bold tracking-widest px-2 py-0.5 z-10 uppercase">
+                        Fair
+                    </span>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div class="flex flex-col">
+                        <h3 class="text-[0.85rem] font-serif font-bold text-[#1A1A1A] mb-1">Corduroy Blazer</h3>
+                        <div class="text-[0.65rem] text-[#888] flex gap-2">
+                            <span>Outerwear</span>
+                            <span>Size M</span>
+                        </div>
+                    </div>
+                    <span class="font-serif font-bold text-[0.85rem] text-[#1A1A1A]">P720</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</div>
