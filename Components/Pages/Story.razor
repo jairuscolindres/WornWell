@@ -1,0 +1,108 @@
+@page "/story"
+
+<!-- Removed max-w-[1440px], mx-auto, and shadow-2xl to allow edge-to-edge bleed -->
+<div class="min-h-screen flex flex-col w-full bg-[#f5f3ef] text-[#1A1A1A] font-sans selection:bg-[#A35C46] selection:text-white">
+    
+    <!-- Navigation -->
+    <header class="relative flex items-center py-6 px-8 md:px-16 border-b border-black/5">
+        <a href="/" class="font-serif font-bold text-xl tracking-tight text-[#1A1A1A] hover:text-[#A35C46] transition-colors">Worn Well</a>
+        
+        <nav class="hidden md:flex gap-8 absolute left-1/2 -translate-x-1/2">
+            <a href="/" class="text-[0.8rem] font-medium text-[#666] hover:text-[#A35C46] transition-colors">Home</a>
+            <a href="#" class="text-[0.8rem] font-medium text-[#666] hover:text-[#A35C46] transition-colors">Shop</a>
+            <a href="/story" class="text-[0.8rem] font-medium text-[#A35C46]">About</a>
+        </nav>
+    </header>
+
+    <!-- Main Content (Text kept centered and contained for readability) -->
+    <main class="flex-1 px-8 md:px-16 py-20 mx-auto w-full max-w-5xl">
+        
+        <!-- Hero Section -->
+        <div class="mb-16">
+            <span class="text-[0.65rem] font-bold tracking-[0.2em] text-[#A35C46] uppercase mb-5 block">Our Sourcing Story</span>
+            <h1 class="text-5xl md:text-[4.5rem] font-serif font-light leading-[1.05] mb-8 text-[#1A1A1A]">
+                Every piece has a<br/><em class="italic tracking-tight">story worth telling.</em>
+            </h1>
+            <p class="text-[#666] text-[0.85rem] leading-[1.8] max-w-[500px]">
+                We don't just resell clothes — we trace where they come from, who wore them, and why they still have life left. Here's how we find every piece in our rack.
+            </p>
+        </div>
+
+        <hr class="border-black/5 mb-16" />
+
+        <!-- 2x2 Values Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-16 mb-16">
+            <div>
+                <span class="text-[0.65rem] font-bold tracking-[0.2em] text-[#A35C46] uppercase mb-3 block">01 &mdash; The Hunt</span>
+                <h3 class="text-[1.4rem] font-serif text-[#1A1A1A] mb-3 leading-snug">
+                    Sourced from markets,<br/><em class="italic">not warehouses.</em>
+                </h3>
+                <p class="text-[#666] text-[0.8rem] leading-[1.8]">
+                    We visit ukay-ukay stalls, estate sales, and community swaps every week &mdash; picking items by hand, not in bulk. Each trip takes four to eight hours. Most pieces don't make the cut.
+                </p>
+            </div>
+            
+            <div>
+                <span class="text-[0.65rem] font-bold tracking-[0.2em] text-[#A35C46] uppercase mb-3 block">02 &mdash; The Check</span>
+                <h3 class="text-[1.4rem] font-serif text-[#1A1A1A] mb-3 leading-snug">
+                    Inspected once,<br/><em class="italic">described honestly.</em>
+                </h3>
+                <p class="text-[#666] text-[0.8rem] leading-[1.8]">
+                    Every item passes a twelve-point inspection &mdash; seams, zips, buttons, fabric, lining, and label. Flaws are noted in the listing, never hidden. If we wouldn't wear it, we don't sell it.
+                </p>
+            </div>
+            
+            <div>
+                <span class="text-[0.65rem] font-bold tracking-[0.2em] text-[#A35C46] uppercase mb-3 block">03 &mdash; The Price</span>
+                <h3 class="text-[1.4rem] font-serif text-[#1A1A1A] mb-3 leading-snug">
+                    Fair to the buyer,<br/><em class="italic">fair to the maker.</em>
+                </h3>
+                <p class="text-[#666] text-[0.8rem] leading-[1.8]">
+                    Pricing reflects real condition, not nostalgia. We research original retail prices, current resale rates, and wear level. You'll never overpay for a name &mdash; or underpay for quality.
+                </p>
+            </div>
+            
+            <div>
+                <span class="text-[0.65rem] font-bold tracking-[0.2em] text-[#A35C46] uppercase mb-3 block">04 &mdash; The Belief</span>
+                <h3 class="text-[1.4rem] font-serif text-[#1A1A1A] mb-3 leading-snug">
+                    Second hand,<br/><em class="italic">first choice.</em>
+                </h3>
+                <p class="text-[#666] text-[0.8rem] leading-[1.8]">
+                    We believe the most sustainable garment is one already made. Shopping secondhand extends a piece's life and breaks the cycle of disposable fashion &mdash; one well-worn item at a time.
+                </p>
+            </div>
+        </div>
+
+        <hr class="border-black/5 mb-16" />
+
+        <!-- Stats Row -->
+        <div class="flex flex-wrap gap-12 pb-8">
+            <div class="flex flex-col">
+                <span class="text-[1.7rem] font-serif text-[#1A1A1A]">340+</span>
+                <span class="text-[0.65rem] font-bold text-[#888] mt-1">Items listed</span>
+            </div>
+            <div class="flex flex-col">
+                <span class="text-[1.7rem] font-serif text-[#1A1A1A]">P100</span>
+                <span class="text-[0.65rem] font-bold text-[#888] mt-1">Avg. shipping</span>
+            </div>
+            <div class="flex flex-col">
+                <span class="text-[1.7rem] font-serif text-[#1A1A1A]">100%</span>
+                <span class="text-[0.65rem] font-bold text-[#888] mt-1">Authenticated</span>
+            </div>
+            <div class="flex flex-col">
+                <span class="text-[1.7rem] font-serif text-[#1A1A1A]">3 yrs</span>
+                <span class="text-[0.65rem] font-bold text-[#888] mt-1">Sourcing experience</span>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bottom CTA Block (Now stretches fully edge-to-edge) -->
+    <div class="w-full bg-[#1f1d1b] text-[#f5f3ef] py-24 px-8 mt-auto flex flex-col items-center justify-center border-t-4 border-[#A35C46]">
+        <h2 class="text-3xl md:text-4xl font-serif font-light mb-10 text-center leading-tight">
+            Now that you know the story,<br/><em class="italic">browse the rack.</em>
+        </h2>
+        <a href="/" class="bg-[#f5f3ef] text-[#1A1A1A] px-8 py-3.5 text-[0.7rem] font-bold tracking-widest hover:bg-white transition-colors uppercase">
+            Back to Home
+        </a>
+    </div>
+</div>
