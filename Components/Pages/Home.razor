@@ -1,220 +1,214 @@
 ﻿@page "/"
 
-<PageTitle>Worn Well - Home</PageTitle>
-
-<div class="landing-container">
-    <!-- Top Navigation Bar -->
-    <header class="navbar">
-        <div class="logo">Worn Well</div>
-        <nav class="nav-links">
-            <a href="/" class="active">Home</a>
-            <a href="/shop">Shop</a>
-            <a href="/about">About</a>
+<div class="min-h-screen bg-[#f5f3ef] text-[#1A1A1A] font-sans selection:bg-[#A35C46] selection:text-white">
+    
+    <!-- Navigation -->
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-[#f5f3ef] flex justify-between items-center py-6 px-8 md:px-16 border-b border-black/5">
+        <div class="font-serif font-bold text-xl tracking-tight">Worn Well</div>
+        
+        <nav class="hidden md:flex gap-8">
+            <a href="#" class="text-[0.8rem] font-medium text-[#A35C46]">Home</a>
+            <a href="#" class="text-[0.8rem] font-medium text-[#666] hover:text-[#A35C46] transition-colors">Shop</a>
+            <a href="#" class="text-[0.8rem] font-medium text-[#666] hover:text-[#A35C46] transition-colors">About</a>
         </nav>
-        <div class="nav-icons">
+
+        <div class="flex items-center gap-5">
             <!-- Search Icon -->
-            <span class="icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            <button class="text-[#1A1A1A] hover:text-[#A35C46] transition-colors">
+                <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                 </svg>
-            </span>
-            <!-- Shopping Bag Icon with Badge -->
-            <span class="icon cart-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </button>
+            <!-- Cart Icon -->
+            <button class="relative text-[#1A1A1A] hover:text-[#A35C46] transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
                 </svg>
-                <span class="badge">2</span>
-            </span>
+                <span class="absolute -top-1.5 -right-2 bg-[#A35C46] text-white text-[0.6rem] px-[5px] py-[1px] rounded-full font-medium">0</span>
+            </button>
         </div>
     </header>
 
-    <!-- Main Content Grid -->
-    <main class="main-content">
-        <!-- Left Column: Branding & CTA -->
-        <section class="hero-left">
-            <div class="tagline-small">SECONDHAND & LOVED</div>
-            <h1 class="hero-title">Clothes with <em>a past.</em></h1>
-            <p class="hero-description">
+    <!-- 1. LANDING HERO SECTION -->
+    <main class="grid grid-cols-1 lg:grid-cols-2 px-8 md:px-16 pt-16 pb-24">
+        <!-- Left Side: Copy & Stats -->
+        <div class="pr-12 lg:pt-12">
+            <span class="text-[0.65rem] font-bold tracking-[0.2em] text-[#A35C46] uppercase mb-4 block">Secondhand & Loved</span>
+            <h1 class="text-6xl lg:text-[5.5rem] font-light leading-[1.05] mb-6">
+                Clothes with<br/><em class="font-serif italic tracking-tight">a past.</em>
+            </h1>
+            <p class="text-[#666] text-[0.85rem] leading-relaxed max-w-[340px] mb-12">
                 Carefully curated thrifted pieces — each one inspected, described honestly, and priced fairly. Find your next favourite thing.
             </p>
-
-            <div class="cta-container">
-                <button class="btn-primary" @onclick="BrowseRack">BROWSE THE RACK</button>
-                <a href="/sourcing-story" class="link-story">Our sourcing story</a>
+            
+            <div class="flex items-center gap-6 mb-16">
+                <button class="bg-[#1A1A1A] text-white px-8 py-3.5 text-[0.7rem] font-bold tracking-widest hover:bg-[#333] transition-colors uppercase">
+                    Browse the Rack
+                </button>
+                <a href="#" class="text-[#1A1A1A] underline text-[0.8rem] font-medium hover:text-[#A35C46] transition-colors">Our sourcing story</a>
             </div>
-
-            <!-- Stats Row -->
-            <div class="stats-row">
-                <div class="stat-item">
-                    <span class="stat-num">340+</span>
-                    <span class="stat-label">Items listed</span>
+            
+            <!-- Thin Divider -->
+            <hr class="border-black/5 mb-10 max-w-[400px]" />
+            
+            <!-- Stats -->
+            <div class="flex gap-12">
+                <div class="flex flex-col">
+                    <span class="text-xl font-medium text-[#1A1A1A]">340+</span>
+                    <span class="text-[0.7rem] text-[#888] mt-1">Items listed</span>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-num">₱100</span>
-                    <span class="stat-label">Avg. shipping</span>
+                <div class="flex flex-col">
+                    <span class="text-xl font-medium text-[#1A1A1A]">P100</span>
+                    <span class="text-[0.7rem] text-[#888] mt-1">Avg. shipping</span>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-num">100%</span>
-                    <span class="stat-label">Authenticated</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Right Column: Image & Overlay Card -->
-        <section class="hero-right">
-            <div class="image-wrapper">
-                <img src="/images/browsing.png" alt="Thrift shopping woman" class="hero-img" />
-                
-                <div class="overlay-card">
-                    <span class="tagline-small">JUST DROPPED</span>
-                    <h3>New arrivals are in</h3>
-                    <p>40 new pieces added this week</p>
+                <div class="flex flex-col">
+                    <span class="text-xl font-medium text-[#1A1A1A]">100%</span>
+                    <span class="text-[0.7rem] text-[#888] mt-1">Authenticated</span>
                 </div>
             </div>
-        </section>
+        </div>
+
+        <!-- Right Side: Image -->
+        <div class="relative w-full h-[600px] mt-12 lg:mt-0 lg:-mr-16">
+            <img src="images/browsing.png" alt="Browsing thrift store" class="w-full h-full object-cover object-center" />
+            
+            <!-- Overlay Card -->
+            <div class="absolute bottom-0 left-0 bg-[#f5f3ef]/95 backdrop-blur-sm p-6 pr-12">
+                <span class="text-[0.6rem] font-bold tracking-[0.15em] text-[#A35C46] uppercase mb-2 block">Just Dropped</span>
+                <h3 class="text-[1.1rem] font-serif text-[#1A1A1A]">New arrivals are in</h3>
+                <p class="text-[0.7rem] text-[#666] mt-1">40 new pieces added this week</p>
+            </div>
+        </div>
     </main>
 
-    <!-- Shop By Category Section -->
-    <section class="category-section">
-        <div class="category-header">
-            <h2 class="section-title">Shop by <em>category</em></h2>
-            <a href="/shop" class="view-all">View all &rarr;</a>
+    <!-- 2. CLOSET SECTION -->
+    <section class="py-20 px-8 md:px-16">
+        <div class="flex justify-between items-end mb-12">
+            <h2 class="text-4xl font-light leading-none tracking-tight">Shop by<br/><em class="font-serif italic">category</em></h2>
+            <a href="#" class="text-[0.7rem] font-bold tracking-widest uppercase text-[#1A1A1A] hover:text-[#A35C46] border-b border-[#1A1A1A] hover:border-[#A35C46] pb-0.5 transition-colors">View all &rarr;</a>
         </div>
 
-        <div class="category-grid">
-            <div class="category-card">
-                <img src="/images/tops.png" alt="Tops" />
-                <div class="category-overlay">
-                    <h3>Tops</h3>
-                    <p>82 pieces</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Category: Tops -->
+            <a href="#" class="relative aspect-[4/5] overflow-hidden group">
+                <img src="images/tops.png" alt="Tops" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent flex flex-col justify-end p-6 text-white">
+                    <h3 class="text-xl font-serif tracking-wide">Tops</h3>
+                    <p class="text-[0.7rem] text-white/70 mt-1">82 pieces</p>
                 </div>
+            </a>
+            <!-- Category: Bottoms -->
+            <a href="#" class="relative aspect-[4/5] overflow-hidden group">
+                <img src="images/bottoms.png" alt="Bottoms" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent flex flex-col justify-end p-6 text-white">
+                    <h3 class="text-xl font-serif tracking-wide">Bottoms</h3>
+                    <p class="text-[0.7rem] text-white/70 mt-1">64 pieces</p>
+                </div>
+            </a>
+            <!-- Category: Dresses -->
+            <a href="#" class="relative aspect-[4/5] overflow-hidden group">
+                <img src="images/dresses.png" alt="Dresses" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent flex flex-col justify-end p-6 text-white">
+                    <h3 class="text-xl font-serif tracking-wide">Dresses</h3>
+                    <p class="text-[0.7rem] text-white/70 mt-1">48 pieces</p>
+                </div>
+            </a>
+            <!-- Category: Outerwear -->
+            <a href="#" class="relative aspect-[4/5] overflow-hidden group">
+                <img src="images/outerwear.png" alt="Outerwear" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent flex flex-col justify-end p-6 text-white">
+                    <h3 class="text-xl font-serif tracking-wide">Outerwear</h3>
+                    <p class="text-[0.7rem] text-white/70 mt-1">73 pieces</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- 3. FAVORITES SECTION -->
+    <section class="pt-16 pb-28 px-8 md:px-16">
+        <div class="flex justify-between items-end mb-12">
+            <div>
+                <span class="text-[0.65rem] font-bold tracking-[0.2em] text-[#A35C46] uppercase mb-3 block">Handpicked</span>
+                <h2 class="text-4xl font-light leading-none tracking-tight">This week's<br/><em class="font-serif italic">favourites</em></h2>
+            </div>
+            <a href="#" class="text-[0.7rem] font-bold tracking-widest uppercase text-[#1A1A1A] hover:text-[#A35C46] border-b border-[#1A1A1A] hover:border-[#A35C46] pb-0.5 transition-colors">See all new arrivals &rarr;</a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <!-- Product 1 -->
+            <div class="flex flex-col group cursor-pointer">
+                <div class="relative aspect-[4/5] mb-5 bg-[#e8e4de] overflow-hidden">
+                    <span class="absolute top-4 left-4 bg-white text-[#1A1A1A] text-[0.65rem] font-bold tracking-wider px-2.5 py-1 z-10 shadow-sm">
+                        Excellent
+                    </span>
+                    <img src="images/bottoms.png" alt="Levi's 501" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <span class="text-[0.65rem] tracking-[0.15em] text-[#888] mb-1.5 uppercase">Bottoms - W30 L32</span>
+                <h3 class="text-[1.05rem] font-serif text-[#1A1A1A] mb-2">Levi's 501 Straight Leg</h3>
+                <span class="font-bold text-[0.85rem] text-[#1A1A1A]">P150</span>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="flex flex-col group cursor-pointer">
+                <div class="relative aspect-[4/5] mb-5 bg-[#e8e4de] overflow-hidden">
+                    <span class="absolute top-4 left-4 bg-white text-[#1A1A1A] text-[0.65rem] font-bold tracking-wider px-2.5 py-1 z-10 shadow-sm">
+                        Good
+                    </span>
+                    <img src="images/jacket.png" alt="Linen Blazer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <span class="text-[0.65rem] tracking-[0.15em] text-[#888] mb-1.5 uppercase">Outerwear - M / L</span>
+                <h3 class="text-[1.05rem] font-serif text-[#1A1A1A] mb-2">Oversized Linen Blazer</h3>
+                <span class="font-bold text-[0.85rem] text-[#1A1A1A]">P250</span>
             </div>
 
-            <div class="category-card">
-                <img src="/images/bottoms.png" alt="Bottoms" />
-                <div class="category-overlay">
-                    <h3>Bottoms</h3>
-                    <p>64 pieces</p>
+            <!-- Product 3 -->
+            <div class="flex flex-col group cursor-pointer">
+                <div class="relative aspect-[4/5] mb-5 bg-[#e8e4de] overflow-hidden">
+                    <span class="absolute top-4 left-4 bg-white text-[#1A1A1A] text-[0.65rem] font-bold tracking-wider px-2.5 py-1 z-10 shadow-sm">
+                        Excellent
+                    </span>
+                    <img src="images/dresses.png" alt="Wrap Dress" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
-            </div>
-
-            <div class="category-card">
-                <img src="/images/dresses.png" alt="Dresses" />
-                <div class="category-overlay">
-                    <h3>Dresses</h3>
-                    <p>48 pieces</p>
-                </div>
-            </div>
-
-            <div class="category-card">
-                <img src="/images/outerwear.png" alt="Outerwear" />
-                <div class="category-overlay">
-                    <h3>Outerwear</h3>
-                    <p>72 pieces</p>
-                </div>
+                <span class="text-[0.65rem] tracking-[0.15em] text-[#888] mb-1.5 uppercase">Dresses - S</span>
+                <h3 class="text-[1.05rem] font-serif text-[#1A1A1A] mb-2">Floral Wrap Midi Dress</h3>
+                <span class="font-bold text-[0.85rem] text-[#1A1A1A]">P450</span>
             </div>
         </div>
     </section>
 
-    <!-- This Week's Favourites Section -->
-    <section class="favourites-section">
-        <div class="favourites-header">
-            <div class="favourites-title-group">
-                <span class="tagline-small">HANDPICKED</span>
-                <h2 class="section-title">This week's <em>favourites</em></h2>
+    <!-- 4. FOOTER -->
+    <footer class="bg-[#f5f3ef] px-8 md:px-16 pb-8">
+        <!-- Split Banner -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 w-full min-h-[480px] mb-12">
+            <div class="h-full">
+                <img src="images/clothes.png" alt="Clothing Rack" class="w-full h-full object-cover" />
             </div>
-            <a href="/shop" class="view-all">See all new arrivals &rarr;</a>
-        </div>
-
-        <div class="favourites-grid">
-            <!-- Item 1 -->
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="condition-badge">Excellent</span>
-                    <img src="/images/bottoms.png" alt="Levi's 501 Straight Leg" />
-                </div>
-                <div class="product-meta">
-                    <span class="product-category">BOTTOMS &bull; W30 L32</span>
-                    <h3 class="product-name">Levi's 501 Straight Leg</h3>
-                    <div class="product-pricing">
-                        <span class="current-price">&#8369;150</span>
-                        <span class="original-price">&#8369;300</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Item 2 -->
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="condition-badge">Good</span>
-                    <img src="/images/jacket.png" alt="Oversized Linen Blazer" />
-                </div>
-                <div class="product-meta">
-                    <span class="product-category">OUTERWEAR &bull; M / L</span>
-                    <h3 class="product-name">Oversized Linen Blazer</h3>
-                    <div class="product-pricing">
-                        <span class="current-price">&#8369;250</span>
-                        <span class="original-price">&#8369;500</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Item 3 -->
-            <div class="product-card">
-                <div class="product-image-wrapper">
-                    <span class="condition-badge">Excellent</span>
-                    <img src="/images/dresses.png" alt="Floral Wrap Midi Dress" />
-                </div>
-                <div class="product-meta">
-                    <span class="product-category">DRESSES &bull; S</span>
-                    <h3 class="product-name">Floral Wrap Midi Dress</h3>
-                    <div class="product-pricing">
-                        <span class="current-price">&#8369;450</span>
-                        <span class="original-price">&#8369;900</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Footer Section -->
-    <footer class="footer-section">
-        <div class="footer-content-grid">
-            <!-- Left: Rack Image -->
-            <div class="footer-image-pane">
-                <img src="/images/clothes.png" alt="Thrift clothing rack" />
-            </div>
-
-            <!-- Right: Dark Info Panel -->
-            <div class="footer-text-pane">
-                <span class="tagline-small">WHY THRIFT?</span>
-                <h2 class="footer-headline">Every piece has <em>a story.</em></h2>
-                <p class="footer-body">
+            
+            <div class="bg-[#221f1d] text-[#F4EFEB] p-12 lg:p-20 flex flex-col justify-center">
+                <span class="text-[0.6rem] font-bold tracking-[0.2em] text-[#C27A65] uppercase mb-5 block">Why Thrift?</span>
+                <h2 class="text-4xl lg:text-[3.25rem] font-light leading-[1.1] mb-8 text-[#f5f3ef]">
+                    Every piece has<br/><em class="font-serif italic tracking-tight">a story.</em>
+                </h2>
+                <p class="text-[0.8rem] leading-[1.8] text-[#a39f99] mb-6 max-w-[420px]">
                     Fast fashion is expensive — for you and for the planet. We believe in buying less and buying better. Each piece we list has been worn, loved, and is ready for a second chapter.
                 </p>
-                <p class="footer-body">
+                <p class="text-[0.8rem] leading-[1.8] text-[#a39f99] max-w-[420px]">
                     We inspect every item for quality, describe flaws honestly, and photograph everything ourselves. No surprises, ever.
                 </p>
             </div>
         </div>
 
-        <!-- Bottom Copyright Bar -->
-        <div class="footer-bottom">
-            <div class="footer-brand">Worn Well</div>
-            <div class="footer-copyright">&copy; 2026 &bull; Sustainably sourced, honestly described</div>
-            <div class="footer-links">
-                <a href="/instagram" target="_blank">Instagram</a>
-                <a href="/faq">FAQ</a>
+        <!-- Bottom Bar -->
+        <div class="flex flex-col md:flex-row justify-between items-center pt-8 pb-4 text-[0.7rem] text-[#888] border-t border-black/10">
+            <span class="font-serif font-bold text-base text-[#1A1A1A]">Worn Well</span>
+            
+            <span class="my-4 md:my-0">&copy; 2026 - Sustainably sourced, honestly described</span>
+            
+            <div class="flex gap-8">
+                <a href="#" class="text-[#1A1A1A] font-medium hover:text-[#A35C46] transition-colors">Instagram</a>
+                <a href="#" class="text-[#1A1A1A] font-medium hover:text-[#A35C46] transition-colors">FAQ</a>
             </div>
         </div>
     </footer>
 </div>
-
-@code {
-    private void BrowseRack()
-    {
-        Console.WriteLine("Browse the rack clicked!");
-    }
-}
