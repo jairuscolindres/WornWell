@@ -1,0 +1,307 @@
+@page "/reviews"
+
+@using System.ComponentModel.DataAnnotations
+
+<div class="min-h-screen bg-[#f5f3ef] text-[#1A1A1A] font-sans">
+
+    <!-- Navigation -->
+    <header class="sticky top-0 z-50 bg-[#f5f3ef] flex justify-between items-center py-6 px-8 md:px-16 border-b border-black/5">
+
+        <a href="/"
+           class="font-serif font-bold text-xl tracking-tight">
+            Worn Well
+        </a>
+
+        <a href="/"
+           class="text-[0.7rem] font-bold tracking-widest uppercase text-[#1A1A1A] hover:text-[#A35C46] transition-colors">
+            ← Back to Home
+        </a>
+
+    </header>
+
+
+    <!-- Main -->
+    <main class="max-w-4xl mx-auto px-8 py-16">
+
+        <!-- Page Heading -->
+        <div class="text-center mb-14">
+
+            <span class="text-[0.65rem] font-bold tracking-[0.2em] text-[#A35C46] uppercase">
+                Customer Feedback
+            </span>
+
+            <h1 class="text-5xl md:text-6xl font-serif font-light mt-4 mb-5">
+                Reviews & Ratings
+            </h1>
+
+            <p class="text-[#666] text-sm leading-relaxed max-w-xl mx-auto">
+                We would love to hear about your experience with Worn Well.
+                Share your thoughts and help other customers shop with confidence.
+            </p>
+
+        </div>
+
+
+        <!-- Review Form -->
+        <div class="bg-white p-8 md:p-12 shadow-sm mb-16">
+
+            <h2 class="text-3xl font-serif font-light mb-8">
+                Leave a Review
+            </h2>
+
+
+            <!-- Name -->
+            <div class="mb-7">
+
+                <label class="block text-[0.7rem] font-bold tracking-widest uppercase mb-2">
+                    Your Name
+                </label>
+
+                <input @bind="review.Name"
+                       type="text"
+                       placeholder="Enter your name"
+                       class="w-full border border-black/10 bg-[#faf9f7] px-4 py-3 text-sm focus:outline-none focus:border-[#A35C46]" />
+
+            </div>
+
+
+            <!-- Rating -->
+            <div class="mb-7">
+                <label class="block text-[0.7rem] font-bold tracking-widest uppercase mb-3">
+                    Your Rating
+                </label>
+
+                <div class="flex items-center gap-2">
+
+                    @for (int i = 1; i <= 5; i++)
+                    {
+                        int ratingValue = i;
+
+                        <button type="button"
+                                @onclick="() => SetRating(ratingValue)"
+                                class="text-4xl transition-all duration-200 hover:scale-110
+                                    @(review.Rating >= ratingValue
+                                        ? "text-[#A35C46]"
+                                        : "text-[#C8C2BC]")">
+                            ★
+                        </button>
+                    }
+
+                </div>
+
+                @if (review.Rating > 0)
+                {
+                    <p class="text-xs text-[#888] mt-2">
+                        You selected @review.Rating out of 5 stars.
+                    </p>
+                }
+            </div>
+
+
+            <!-- Comment -->
+            <div class="mb-8">
+
+                <label class="block text-[0.7rem] font-bold tracking-widest uppercase mb-2">
+                    Your Comment
+                </label>
+
+                <textarea @bind="review.Comment"
+                          rows="6"
+                          placeholder="Tell us about your experience..."
+                          class="w-full border border-black/10 bg-[#faf9f7] px-4 py-3 text-sm resize-none focus:outline-none focus:border-[#A35C46]">
+                </textarea>
+
+            </div>
+
+
+            <!-- Submit Button -->
+            <button type="button"
+                    @onclick="SubmitReview"
+                    class="bg-[#1A1A1A] text-white px-10 py-4 text-[0.7rem] font-bold tracking-widest uppercase hover:bg-[#A35C46] transition-colors">
+
+                Submit Review
+
+            </button>
+
+
+            <!-- Success Message -->
+            @if (showSuccess)
+            {
+                <div class="mt-6 p-4 bg-[#eee9e4] border-l-4 border-[#A35C46]">
+
+                    <p class="text-sm">
+                        Thank you, @review.Name! Your review has been submitted.
+                    </p>
+
+                </div>
+            }
+
+        </div>
+
+
+        <!-- Customer Reviews -->
+        <section>
+
+            <div class="flex justify-between items-end mb-8">
+
+                <div>
+
+                    <span class="text-[0.65rem] font-bold tracking-[0.2em] text-[#A35C46] uppercase">
+                        What customers say
+                    </span>
+
+                    <h2 class="text-3xl font-serif font-light mt-2">
+                        Customer Reviews
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            @if (reviews.Count == 0)
+            {
+                <div class="bg-white p-8 text-center">
+
+                    <p class="text-[#888] text-sm">
+                        No reviews yet. Be the first to leave one!
+                    </p>
+
+                </div>
+            }
+            else
+            {
+                <div class="space-y-5">
+
+                    @foreach (var item in reviews)
+                    {
+                        <div class="bg-white p-7 shadow-sm">
+
+                            <!-- Review Header -->
+                            <div class="flex justify-between items-start mb-3">
+
+                                <div>
+
+                                    <h3 class="font-serif text-xl">
+                                        @item.Name
+                                    </h3>
+
+                                    <div class="flex gap-1 mt-1">
+
+                                        @for (int i = 1; i <= 5; i++)
+                                        {
+                                            <span class="@(i <= item.Rating
+                                                ? "text-[#A35C46]"
+                                                : "text-[#D6D0CA]")">
+                                                ★
+                                            </span>
+                                        }
+
+                                    </div>
+
+                                </div>
+
+                                <span class="text-xs text-[#999]">
+                                    @item.Date.ToString("MMM dd, yyyy")
+                                </span>
+
+                            </div>
+
+
+                            <!-- Comment -->
+                            <p class="text-sm text-[#666] leading-relaxed mt-4">
+                                @item.Comment
+                            </p>
+
+                        </div>
+                    }
+
+                </div>
+            }
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="border-t border-black/5 py-8 mt-10">
+
+        <div class="px-8 md:px-16 flex flex-col md:flex-row justify-between items-center gap-4">
+
+            <span class="font-serif font-bold text-base">
+                Worn Well
+            </span>
+
+            <span class="text-[0.7rem] text-[#888]">
+                &copy; 2026 - Sustainably sourced, honestly described
+            </span>
+
+            <a href="/"
+               class="text-[0.7rem] font-bold tracking-widest uppercase hover:text-[#A35C46]">
+                Back to Home
+            </a>
+
+        </div>
+
+    </footer>
+
+</div>
+
+
+@code {
+
+    private ReviewModel review = new();
+
+    private List<ReviewModel> reviews = new();
+
+    private bool showSuccess = false;
+
+
+    private void SetRating(int rating)
+    {
+        review.Rating = rating;
+        showSuccess = false;
+    }
+
+
+    private void SubmitReview()
+    {
+        if (string.IsNullOrWhiteSpace(review.Name))
+            return;
+
+        if (review.Rating == 0)
+            return;
+
+        if (string.IsNullOrWhiteSpace(review.Comment))
+            return;
+
+
+        reviews.Insert(0, new ReviewModel
+        {
+            Name = review.Name,
+            Rating = review.Rating,
+            Comment = review.Comment,
+            Date = DateTime.Now
+        });
+
+
+        showSuccess = true;
+
+
+        review = new ReviewModel();
+    }
+
+
+    public class ReviewModel
+    {
+        public string Name { get; set; } = "";
+
+        public int Rating { get; set; }
+
+        public string Comment { get; set; } = "";
+
+        public DateTime Date { get; set; } = DateTime.Now;
+    }
+
+}
